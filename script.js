@@ -103,4 +103,7 @@ console.log(arr2);
 // CONCAT
 const latters = arr.concat(arr2);
 console.log(latters);
-console.log([...arr,...arr2])
+console.log([...arr, ...arr2]);
+
+// JOIN
+console.log(latters.join(' - '));
