@@ -71,7 +71,7 @@ const currencies = new Map([
   ['GBP', 'Pound sterling'],
 ]);
 
-const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /*
 /////////////////////////////////////////////////
@@ -112,7 +112,7 @@ console.log(latters.join(' - '));
 
 ///////////////////////////////////////
 // The new at Method
-
+/*
 const arr = [23, 11, 64];
 console.log(arr[0]);
 console.log(arr.at(0));
@@ -124,3 +124,18 @@ console.log(arr.at(-1));
 
 console.log('khan'.at(0));
 console.log('faiz'.at(-1));
+*/
+
+///////////////////////////////////////
+// Looping Arrays: forEach
+
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+
+// for (const movement of movements) {
+  for (const [i, movement] of movements.entries()) {
+    if (movement > 0) {
+      console.log(`Movement ${i + 1}: You deposited ${movement}`);
+    } else {
+      console.log(`Movement ${i + 1}: You withdrew ${Math.abs(movement)}`);
+    }
+  }
