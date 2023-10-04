@@ -89,7 +89,7 @@ const displayMovements = function (movements) {
 };
 displayMovements(account1.movements);
 
-console.log(containerMovements.innerHTML);
+// console.log(containerMovements.innerHTML);
 
 // const currencies = new Map([
 //   ['USD', 'United States dollar'],
@@ -198,3 +198,30 @@ currenciesUnique.forEach(function (value, _, map) {
   console.log(`${value}: ${value}`);
 });
 */
+
+///////////////////////////////////////
+// Coding Challenge #1
+
+// TEST DATA 1: Julia's data [3, 5, 2, 12, 7], Kate's data [4, 1, 15, 8, 3]
+// TEST DATA 2: Julia's data [9, 16, 6, 8, 3], Kate's data [10, 5, 6, 1, 4]
+
+const chechDogs = function (dogsJulia, dogsKate) {
+  const dogsJuliaCorrected = dogsJulia.slice();
+  dogsJuliaCorrected.splice(0, 1);
+  dogsJuliaCorrected.splice(-2);
+  // dogsJulia.slice(1,3)
+  const dogs = dogsJuliaCorrected.concat(dogsKate);
+  console.log(dogs);
+
+  dogs.forEach(function (dog, i) {
+    if (dog >= 3) {
+      console.log(
+        `Dog number ${i + 1} is an adult, and is ${dog} years of old`
+      );
+    } else {
+      console.log(`Dog number ${i + 1} ia still a puppy🐶`);
+    }
+  });
+};
+
+chechDogs([9, 16, 6, 8, 3], [4, 1, 15, 8, 3]);
