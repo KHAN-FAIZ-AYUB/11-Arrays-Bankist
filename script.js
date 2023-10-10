@@ -271,6 +271,7 @@ const movementsDescription = movements.map(
 console.log(movementsDescription);
 */
 
+/*
 ///////////////////////////////////////
 // The filter Method
 const deposits = account1.movements.filter(function (mov) {
@@ -291,6 +292,17 @@ console.log(depositFor);
 const withdrawalFor = [];
 for (const mov of account1.movements) if (mov < 0) withdrawalFor.push(mov);
 console.log(withdrawalFor);
+*/
 
 ///////////////////////////////////////
 // The reduce Method
+
+console.log(account1.movements);
+
+// accumulator -> SNOWBALL
+
+const balance = account1.movements.reduce(function (acc, curr, i, arr) {
+  console.log(`Iteration ${i}: ${acc} `);
+  return acc + curr;
+}, 0);
+console.log(balance);
