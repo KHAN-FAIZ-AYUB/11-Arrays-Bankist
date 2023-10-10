@@ -90,17 +90,16 @@ const displayMovements = function (movements) {
 displayMovements(account1.movements);
 
 const creaUserNames = function (accs) {
-  accs.forEach(function(acc){
-  acc.username = acc.owner
-    .toLowerCase()
-    .split(' ')
-    .map(name => name[0])
-    .join('');
-
+  accs.forEach(function (acc) {
+    acc.username = acc.owner
+      .toLowerCase()
+      .split(' ')
+      .map(name => name[0])
+      .join('');
   });
-}; 
+};
 creaUserNames(accounts);
-console.log(accounts);
+// console.log(accounts);
 
 // console.log(containerMovements.innerHTML);
 
@@ -274,3 +273,9 @@ console.log(movementsDescription);
 
 ///////////////////////////////////////
 // The filter Method
+const deposits = account1.movements.filter(function (mov) {
+  return mov > 0;
+});
+console.log(account1.movements);
+console.log(deposits);
+
