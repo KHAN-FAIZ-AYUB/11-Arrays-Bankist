@@ -279,15 +279,15 @@ const deposits = account1.movements.filter(function (mov) {
 console.log(account1.movements);
 console.log(deposits);
 
+const withdrawals = account1.movements.filter(mov => mov < 0);
+console.log(withdrawals);
+
+//using forOf loop
+
 const depositFor = [];
 for (const mov of account1.movements) if (mov > 0) depositFor.push(mov);
 console.log(depositFor);
 
-const withdrawals = account1.movements.filter(function (mov) {
-  return mov < 0;
-});
-console.log(withdrawals);
-
 const withdrawalFor = [];
-for (mov of account1.movements) if (mov < 0) withdrawalFor.push(mov);
-console(withdrawalFor);
+for (const mov of account1.movements) if (mov < 0) withdrawalFor.push(mov);
+console.log(withdrawalFor);
