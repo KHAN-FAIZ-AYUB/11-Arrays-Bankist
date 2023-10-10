@@ -301,8 +301,15 @@ console.log(account1.movements);
 
 // accumulator -> SNOWBALL
 
-const balance = account1.movements.reduce(function (acc, curr, i, arr) {
-  console.log(`Iteration ${i}: ${acc} `);
-  return acc + curr;
-}, 0);
+// const balance = account1.movements.reduce(function (acc, curr, i, arr) {
+//   console.log(`Iteration ${i}: ${acc} `);
+//   return acc + curr;
+// }, 0);
+// console.log(balance);
+
+const balance = account1.movements.reduce((acc, curr) => acc + curr, 0);
 console.log(balance);
+
+let balance2 = 0;
+for (const mov of account1.movements) balance2 += mov;
+console.log(balance2);
