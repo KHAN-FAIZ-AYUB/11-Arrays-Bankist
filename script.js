@@ -89,6 +89,19 @@ const displayMovements = function (movements) {
 };
 displayMovements(account1.movements);
 
+const creaUserNames = function (accs) {
+  accs.forEach(function(acc){
+  acc.username = acc.owner
+    .toLowerCase()
+    .split(' ')
+    .map(name => name[0])
+    .join('');
+
+  });
+}; 
+creaUserNames(accounts);
+console.log(accounts);
+
 // console.log(containerMovements.innerHTML);
 
 // const currencies = new Map([
@@ -228,6 +241,7 @@ const chechDogs = function (dogsJulia, dogsKate) {
 chechDogs([9, 16, 6, 8, 3], [4, 1, 15, 8, 3]);
 */
 
+/*
 ///////////////////////////////////////
 // The map Method
 
@@ -256,3 +270,7 @@ const movementsDescription = movements.map(
     )}`
 );
 console.log(movementsDescription);
+*/
+
+///////////////////////////////////////
+// The filter Method
