@@ -279,3 +279,9 @@ const deposits = account1.movements.filter(function (mov) {
 console.log(account1.movements);
 console.log(deposits);
 
+
+const depositFor = [];
+for (const mov of account1.movements) if (mov > 0) depositFor.push(mov);
+console.log(depositFor);
+
+
