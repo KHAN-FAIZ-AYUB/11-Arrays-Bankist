@@ -285,3 +285,7 @@ for (const mov of account1.movements) if (mov > 0) depositFor.push(mov);
 console.log(depositFor);
 
 
+const withdrawals = account1.movements.filter(function (mov) {
+  return mov < 0;
+});
+console.log(withdrawals);
