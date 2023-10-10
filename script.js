@@ -63,9 +63,6 @@ const inputClosePin = document.querySelector('.form__input--pin');
 
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
-// LECTURES
-
-/////////////////////////////////////////////////
 // Functions
 
 const displayMovements = function (movements) {
@@ -76,18 +73,27 @@ const displayMovements = function (movements) {
     const type = mov > 0 ? 'deposit' : 'withdrawal';
 
     const html = `
-      <div class="movements__row">
-        <div class="movements__type movements__type--${type}">${
-      i + 1
-    } ${type}</div>
+    <div class="movements__row">
+    <div class="movements__type movements__type--${type}">${i + 1} ${type}</div>
         <div class="movements__value">${mov}€</div>
       </div>
-    `;
+      `;
 
     containerMovements.insertAdjacentHTML('afterbegin', html);
   });
 };
 displayMovements(account1.movements);
+// console.log(containerMovements.innerHTML);
+
+// ////////////////////////////////////////////////////////////
+
+const calcDisplayBalance = function (movements) {
+  const balance = movements.reduce((acc, mov) => acc + mov, 0);
+  labelBalance.textContent = `${balance}EUR`;
+};
+calcDisplayBalance(account1.movements);
+
+// ///////////////////////////////////////////////////////////
 
 const creaUserNames = function (accs) {
   accs.forEach(function (acc) {
@@ -101,15 +107,16 @@ const creaUserNames = function (accs) {
 creaUserNames(accounts);
 // console.log(accounts);
 
-// console.log(containerMovements.innerHTML);
+/////////////////////////////////////////////////
+// LECTURES
+
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 // const currencies = new Map([
 //   ['USD', 'United States dollar'],
 //   ['EUR', 'Euro'],
 //   ['GBP', 'Pound sterling'],
 // ]);
-
-// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /*
 /////////////////////////////////////////////////
@@ -297,7 +304,7 @@ console.log(withdrawalFor);
 ///////////////////////////////////////
 // The reduce Method
 
-console.log(account1.movements);
+console.log(movements);
 
 // accumulator -> SNOWBALL
 
@@ -307,9 +314,17 @@ console.log(account1.movements);
 // }, 0);
 // console.log(balance);
 
-const balance = account1.movements.reduce((acc, curr) => acc + curr, 0);
+const balance = movements.reduce((acc, curr) => acc + curr, 0);
 console.log(balance);
 
 let balance2 = 0;
-for (const mov of account1.movements) balance2 += mov;
+for (const mov of movements) balance2 += mov;
 console.log(balance2);
+
+// MAXIMUM value
+
+const max = movements.reduce((acc, mov) => {
+  if (acc > mov) return acc;
+  else return mov;
+}, movements[0]);
+console.log(max);
