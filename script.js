@@ -291,3 +291,6 @@ console.log(depositFor);
 const withdrawalFor = [];
 for (const mov of account1.movements) if (mov < 0) withdrawalFor.push(mov);
 console.log(withdrawalFor);
+
+///////////////////////////////////////
+// The reduce Method
