@@ -356,7 +356,7 @@ const max = movements.reduce((acc, mov) => {
 console.log(max);
 */
 
-
+/*
 ///////////////////////////////////////
 // Coding Challenge #2
 
@@ -374,7 +374,7 @@ const calcAverageHumanAge1 = function (ages) {
 const avg1=calcAverageHumanAge1([5, 2, 4, 1, 15, 8, 3]);
 const avg2=calcAverageHumanAge1([16, 6, 10, 5, 6, 1, 4])
 console.log(avg1, avg2)
-
+*/
 
 /*
 ///////////////////////////////////////
@@ -393,6 +393,7 @@ const totalDepositsUSD = movements
 console.log(totalDepositsUSD);
 */
 
+/*
 ///////////////////////////////////////
 // Coding Challenge #3
 
@@ -406,3 +407,11 @@ const calcAverageHumanAge = ages =>
 const age1=calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3])
 const age2=calcAverageHumanAge([16, 6, 10, 5, 6, 1, 4])
 console.log(age1,age2)
+*/
+
+///////////////////////////////////////
+// The Find Method
+
+const firstWithdrawal = movements.find(mov => mov < 0);
+console.log(movements);
+console.log(firstWithdrawal);
