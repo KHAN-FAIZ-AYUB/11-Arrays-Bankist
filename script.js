@@ -110,7 +110,7 @@ const calcDisplaySummary = function (movements) {
     .filter(mov => mov > 0)
     .map(deposit => (deposit * 1.2) / 100)
     .filter((int, i, arr) => {
-      console.log(arr);
+      // console.log(arr);
       return int >= 1;
     })
     .reduce((acc, int) => acc + int, 0);
@@ -356,11 +356,11 @@ const max = movements.reduce((acc, mov) => {
 console.log(max);
 */
 
-/*
+
 ///////////////////////////////////////
 // Coding Challenge #2
 
-const calcAverageHumanAge = function (ages) {
+const calcAverageHumanAge1 = function (ages) {
   const humanAge = ages.map(age => (age <= 2 ? 2 * age : 16 + age * 4));
   const adultDog = humanAge.filter(age => age >= 18);
   console.log(humanAge);
@@ -371,11 +371,12 @@ const calcAverageHumanAge = function (ages) {
   const average=adultDog.reduce((acc,age,i,arr)=>acc+age/arr.length,0)
   return average
 };
-const avg1=calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3]);
-const avg2=calcAverageHumanAge([16, 6, 10, 5, 6, 1, 4])
+const avg1=calcAverageHumanAge1([5, 2, 4, 1, 15, 8, 3]);
+const avg2=calcAverageHumanAge1([16, 6, 10, 5, 6, 1, 4])
 console.log(avg1, avg2)
-*/
 
+
+/*
 ///////////////////////////////////////
 // The Magic of Chaining Methods
 
@@ -390,3 +391,18 @@ const totalDepositsUSD = movements
   })
   .reduce((acc, mov) => acc + mov, 0);
 console.log(totalDepositsUSD);
+*/
+
+///////////////////////////////////////
+// Coding Challenge #3
+
+const calcAverageHumanAge = ages =>
+  ages
+    .map(age => (age <= 2 ? 2 * age : 16 + age * 4))
+    .filter(age => age >= 18)
+    .reduce((acc, age, i, arr) => acc + age / arr.length, 0);
+// adults.length
+
+const age1=calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3])
+const age2=calcAverageHumanAge([16, 6, 10, 5, 6, 1, 4])
+console.log(age1,age2)
