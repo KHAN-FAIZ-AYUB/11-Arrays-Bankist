@@ -539,3 +539,8 @@ console.log(movements.some(mov => mov === -130));
 
 const anyDeposite = movements.some(mov => mov > 0);
 console.log(anyDeposite);
+
+// EVERY
+console.log(movements.every(mov => mov > 0));
+console.log(account4.movements.every(mov => mov > 0));
+
