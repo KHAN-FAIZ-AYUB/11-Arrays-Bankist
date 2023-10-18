@@ -571,7 +571,14 @@ console.log(overAllMovements);
 
 // ////////////////////////////////////////////
 const overAllBalance = accounts
-  .map(acc => acc.movements)
-  .flat()
+  .flatMap(acc => acc.movements)
   .reduce((acc, mov) => acc + mov, 0);
 console.log(overAllBalance);
+
+///////////////////////////////////////
+// Sorting Arrays
+
+// Strings
+const owners=['faiz','faisal','fareen']
+console.log(owners.sort())
+console.log(owners)
