@@ -579,6 +579,19 @@ console.log(overAllBalance);
 // Sorting Arrays
 
 // Strings
-const owners=['faiz','faisal','fareen']
-console.log(owners.sort())
-console.log(owners)
+const owners = ['faiz', 'faisal', 'fareen'];
+console.log(owners.sort());
+console.log(owners);
+
+// Numbers
+console.log(movements);
+
+// return < 0 A,B (keep order)
+// return > 0 B,A (switch order)
+
+// Ascending
+movements.sort((a, b) => {
+  if (a > b) return 1;
+  if (b > a) return -1;
+});
+console.log(movements);
