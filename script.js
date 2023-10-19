@@ -666,3 +666,18 @@ const bankDepositSum = accounts
   .filter(mov => mov > 0)
   .reduce((acc, cur) => acc + cur, 0);
 console.log(bankDepositSum);
+
+// 2.
+// const numDeposite1000 = accounts
+//   .flatMap(acc => acc.movements)
+//   .filter(mov => mov >= 1000).length;
+
+const numDeposite1000 = accounts
+  .flatMap(acc => acc.movements)
+  .reduce((count, cur) => (cur >= 1000 ? ++count : count), 0);
+console.log(numDeposite1000);
+
+// Prefix ++operator
+let a = 10;
+console.log(++a);
+console.log(a);
