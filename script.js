@@ -634,4 +634,14 @@ x.fill(23, 2, 4);
 console.log(x);
 
 arr.fill(11, 4, 6);
-console.log(arr)
+console.log(arr);
+
+// Array.from
+const y = Array.from({ length: 7 }, () => 1);
+console.log(y);
+
+const z = Array.from({ length: 7 }, (_, i) => i + 1);
+console.log(z);
+
+
+
