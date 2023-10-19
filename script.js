@@ -562,6 +562,7 @@ console.log(movements.some(deposit));
 console.log(movements.filter(deposit));
 */
 
+/*
 ///////////////////////////////////////
 // flat and flatMap
 
@@ -584,7 +585,9 @@ const overAllBalance = accounts
   .flatMap(acc => acc.movements)
   .reduce((acc, mov) => acc + mov, 0);
 console.log(overAllBalance);
+*/
 
+/*
 ///////////////////////////////////////
 // Sorting Arrays
 
@@ -614,3 +617,4 @@ console.log(movements);
 // });
 movements.sort((a, b) => b - a);
 console.log(movements);
+*/
