@@ -619,6 +619,7 @@ movements.sort((a, b) => b - a);
 console.log(movements);
 */
 
+/*
 ///////////////////////////////////////
 // More Ways of Creating and Filling Arrays
 
@@ -653,3 +654,15 @@ labelBalance.addEventListener('click', function () {
   const movementsUI2 = [...document.querySelectorAll('.movements__values')];
   console.log(movementsUI2);
 });
+*/
+
+///////////////////////////////////////
+// Array Methods Practice
+
+// 1.
+
+const bankDepositSum = accounts
+  .flatMap(acc => acc.movements)
+  .filter(mov => mov > 0)
+  .reduce((acc, cur) => acc + cur, 0);
+console.log(bankDepositSum);
