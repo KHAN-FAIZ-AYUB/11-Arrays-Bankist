@@ -762,3 +762,4 @@ const checkEatingOk = dog =>
 console.log(dogs.some(checkEatingOk));
 
 // g.
+console.log(dogs.fill(checkEatingOk));
