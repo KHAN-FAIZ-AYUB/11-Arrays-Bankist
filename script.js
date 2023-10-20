@@ -716,6 +716,7 @@ console.log(convertTitleCase('this is a LONG title'));
 console.log(convertTitleCase('and here is another title with an EXAMPLE'));
 */
 
+/*
 ///////////////////////////////////////
 // Coding Challenge #4
 
@@ -767,3 +768,4 @@ console.log(dogs.fill(checkEatingOk));
 // h.
 const dogSorted = dogs.slice().sort((a, b) => a.curFoodFood - b.recFood);
 console.log(dogSorted);
+*/
