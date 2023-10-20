@@ -681,3 +681,16 @@ console.log(numDeposite1000);
 let a = 10;
 console.log(++a);
 console.log(a);
+
+// 3.
+const { deposit, withdrawals } = accounts
+  .flatMap(acc => acc.movements)
+  .reduce(
+    (sums, cur) => {
+      // cur > 0 ? (sums.deposit += cur) : (sums.withdrawals += cur);
+      sums[cur > 0 ? 'deposit' : 'withdrawals'] += cur;
+      return sums;
+    },
+    { deposit: 0, withdrawals: 0 }
+  );
+console.log(deposit, withdrawals);
