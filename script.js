@@ -755,3 +755,10 @@ console.log(`${ownerEatTooLittle.join(' and ')}'s dogs eat too little!`);
 
 // e.
 console.log(dogs.some(dog => dog.curFood === dog.recFood));
+
+// f.
+const checkEatingOk = dog =>
+  dog.curFood > dog.recFood * 0.9 && dog.curFood < dog.recFood * 1.1;
+console.log(dogs.some(checkEatingOk));
+
+// g.
