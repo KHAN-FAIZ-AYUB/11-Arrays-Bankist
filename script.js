@@ -763,3 +763,7 @@ console.log(dogs.some(checkEatingOk));
 
 // g.
 console.log(dogs.fill(checkEatingOk));
+
+// h.
+const dogSorted = dogs.slice().sort((a, b) => a.curFoodFood - b.recFood);
+console.log(dogSorted);
